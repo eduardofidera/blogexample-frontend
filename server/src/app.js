@@ -1,6 +1,5 @@
 import express from 'express';
 
-// server side rendering related
 import path from 'path';
 import React from 'react';
 
@@ -23,7 +22,7 @@ const app = express();
 // express app - server side rendering related
 app.use(express.static(path.resolve( __dirname, "../../client/public")));
 
-app.get(/^((?!\/api).)*$/, (req, res) => {
+app.get('/*', (req, res) => {
     const client = new ApolloClient({
         ssrMode: true,
         link: new HttpLink({
@@ -56,7 +55,6 @@ app.get(/^((?!\/api).)*$/, (req, res) => {
     });
 });
 
-
 app.listen(process.env.PORT || 3000, () => {
     console.log('app is running!')
 })
@@ -66,7 +64,8 @@ const Html = ({ content, state }) => {
         <html>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>Rage Boilerplate</title>
+                <title>Rage</title>
+                <link rel="stylesheet" type="text/css" href="/styles.css" />
             </head>
 
             <body>

@@ -1,5 +1,5 @@
 {
-  "name": "tropical",
+  "name": "rage",
   "version": "1.0.0",
   "description": "",
   "main": "server/index.js",
@@ -9,19 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eduardofidera/tropical-api.git"
+    "url": "git+https://github.com/eduardofidera/rage.git"
   },
   "author": "Eduardo C. de Souza",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eduardofidera/tropical-api/issues"
+    "url": "https://github.com/eduardofidera/rage/issues"
   },
-  "homepage": "https://github.com/eduardofidera/tropical-api#readme",
+  "homepage": "https://github.com/eduardofidera/rage#readme",
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.9",
     "apollo-client": "^2.4.1",
     "apollo-link-http": "^1.5.4",
-    "apollo-server-express": "^2.0.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
@@ -29,11 +28,12 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
-    "body-parser": "^1.18.3",
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "graphql": "^14.0.0",
+    "graphql-tag": "^2.9.2",
+    "mini-css-extract-plugin": "^0.4.2",
     "node-fetch": "^2.2.0",
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
