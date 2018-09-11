@@ -51,7 +51,7 @@ query {
 const PostsWithQuery = graphql(ALL_POSTS_QUERY, {
 name: 'allPostsQuery',
 options: {
-  fetchPolicy: 'network-only',
+  fetchPolicy: 'cache-first',
 },
 })(Posts)
 
