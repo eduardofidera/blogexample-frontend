@@ -1,0 +1,249 @@
+.main-content {
+  width: 100%;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: 16px !important;
+}
+
+.pt-10 {
+  padding-top: 10px;
+  color: #333;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1170px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  .main-menu {
+    display: none;
+    border-bottom: 1px solid #000;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 130px;
+
+    &.--desk {
+      @media screen and (min-width: 751px) {
+        display: flex;
+      }
+    }
+
+    &.--mob {
+      @media screen and (max-width: 750px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 525px) {
+        padding: 0 60px 0 60px;
+      }
+    }
+
+    .menu-mob {
+      background-image: url('/images/menu.png');
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      left: 130px;
+
+      @media screen and (max-width: 525px) {
+        left: 60px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .menu-logo {
+      background-image: url('/images/logo.png');
+      position: absolute;
+      left: 130px;
+      width: 45px;
+      height: 45px;
+
+      @media screen and (max-width: 750px) {
+        left: initial;
+        position: initial;
+      }
+    }
+
+    .menu-items-mob {
+      position: absolute;
+      top: 50px;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      padding: 0 100px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      transition: all 0.5s ease;
+      z-index: 2;
+
+      @media screen and (max-width: 525px) {
+        padding: 0 33px;
+      }
+
+      &.--open {
+        left: 0;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 27px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'Lato', sans-serif;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      span:last-child {
+        margin-left: 27px;
+        color: #4990E2;
+      }
+    }
+
+    .menu-items {
+      @media screen and (max-width: 750px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 27px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'Lato', sans-serif;
+
+        @media screen and (max-width: 775px) {
+          margin-left: 20px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      span:last-child {
+        margin-right: 0px;
+        margin-left: 32px;
+        color: #4990E2;
+      }
+    }
+  }
+}
+
+
+
+.newsletter,
+.newsletter-secondary {
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 60px 130px 0 130px;
+
+  @media screen and (max-width: 525px) {
+    padding: 60px 60px 0 60px;
+  }
+
+  .main-content {
+    .main-news {
+      h2 {
+        font-size: 22px !important;
+      }
+    }
+  }
+
+  .title {
+    font-size: 10px;
+
+    &.-red {
+      color: red;
+    }
+
+    &.-blue {
+      color: #4990E2;
+    }
+
+    &.-green {
+      color: #7CBC37;
+    }
+
+    &.-orange {
+      color: #f5a623;
+    }
+  }
+
+  .avatar {
+    display: flex;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    p {
+      width: 200px;
+      font-size: 10px;
+      padding-top: 10px;
+      padding-left: 10px;
+      font-style: italic;
+      text-transform: capitalize;
+      color: #b5b5b5;
+    }
+  }
+
+  .description {
+    p {
+
+      font-size: 12px;
+      text-transform: capitalize;
+      color: #b5b5b5;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.row {
+  padding: 0;
+  margin: 0;
+}
