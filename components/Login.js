@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 
+import { Link } from 'react-router-dom'
+
 const Login = () => (
   <Fragment>
     <section className="user">
@@ -13,16 +15,18 @@ const Login = () => (
               <form action="" className="form-login">
                 <div className="log-user">
                   <label for="">username</label>
-                  <input type="text" />
+                  <input type="text" required />
                 </div>
                 <div className="log-pass">
                   <label for="">password</label>
-                  <input type="password" />
+                  <input type="password" required />
                 </div>
               </form>
 
               <div className="save">
-                <button className="btn-big">login</button>
+                <Link to="/user">
+                  <button className="btn-big">login</button>
+                </Link>
               </div>
             </div>
           </div>
