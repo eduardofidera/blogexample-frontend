@@ -36,9 +36,25 @@ class Home extends React.Component {
           'Last Week, Nasa Announced A New Program Called The Planetary Defense Coordination Office (PDCO) Which Will Coordinate NASA`S Efforts For Detecting And Tracking Near-Earth-Objects (NEOs). If A Large Object Comes Hurting Toward Our Planet...',
       },
     ],
+
+    filter: 'politics',
+  }
+
+  componentWillMount() {
+    console.log(this.props)
+
+    this.setState({
+      filter: this.props.location.search,
+    })
+  }
+
+  getValueFromParam = function(param) {
+    return true
   }
 
   render() {
+    console.log(this.state.filter)
+
     return (
       <Fragment>
         <section className="newsletter">
@@ -46,7 +62,7 @@ class Home extends React.Component {
             <div className="container">
               <div className="row">
                 {this.state.posts.map((post, i) => {
-                  return (
+                  return post.category == getValueFromParam(this.state.filter) ? (
                     <div
                       className={
                         i == 0 ? `col-md-6 col-sm-12 col-xs-12` : 'col-md-3 col-sm-6 col-xs-12'
@@ -67,6 +83,8 @@ class Home extends React.Component {
                         </div>
                       </div>
                     </div>
+                  ) : (
+                    <div>post not filtered</div>
                   )
                 })}
               </div>
